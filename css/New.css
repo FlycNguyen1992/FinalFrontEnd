@@ -1,5 +1,5 @@
 body {
-	font: 14px 'Asap';
+	font: 16px 'Asap';
 
 }
 
@@ -10,8 +10,11 @@ body {
     }
 
 footer {
-	background-color: #333;
+	background-color: #222222;
 	color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 50px;
 	
 }
 
@@ -22,9 +25,11 @@ footer {
 
 .copy {
 	text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
-ul {
+ul { 
 	list-style: none;
 }
 
@@ -68,6 +73,11 @@ footer a:hover{
   .logocontainer {
   	text-align: center;
   }
+
+  .selectbox {
+    width: 100%;
+    padding-bottom: 30px;
+  }
 }
 
 /* latin-ext */
@@ -85,4 +95,112 @@ footer a:hover{
   font-weight: 400;
   src: local('Asap'), local('Asap-Regular'), url(http://fonts.gstatic.com/s/asap/v4/oiVlPAjaPL0EznW3E5Z2DQ.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+.bHome {
+  color: red;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  
+}
+
+.bHome a {
+  color: black;
+  text-decoration: none;
+}
+
+.bHome a:hover {
+  color: red;
+}
+
+.grid1 {
+  padding-top: 15px;
+  padding-bottom: 50px;
+}
+
+.selectbox {
+  float: right;
+  padding-top: 15px; 
+  
+}
+
+.Pro1 {
+  float: left;
+}
+
+.tabs {
+  word-spacing: 2px;
+}
+
+.shop {
+  text-align: center;
+   padding: 30px;
+   
+}
+
+.imgShop {
+  width: 100%;
+    height: auto;
+}
+
+.adress {
+  color: black;
+
+  text-decoration: none;
+}
+
+.adress:hover{
+  color: red;
+}
+
+
+
+
+  .boxsearch { 
+    border: 1px solid #c4c4c4; 
+    height: 34px; 
+    width: 600px; 
+    font-size: 16px; 
+    padding: 4px 4px 4px 4px; 
+    border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+    box-shadow: 0px 0px 8px #d9d9d9; 
+    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
+} 
+ 
+.boxsearch:focus { 
+    outline: none; 
+    border: 1px solid #7bc1f7; 
+    box-shadow: 0px 0px 8px #7bc1f7; 
+    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
+} 
+ 
+
+.desc:hover{
+text-decoration: none;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.subtotal {
+  float: right;
+}
+
+.img-responsive:hover{
+  opacity: 0.4;
+    
 }
