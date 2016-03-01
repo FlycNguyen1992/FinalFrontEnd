@@ -1,29 +1,49 @@
 <div class="container">
-	<h2>Search for products on our site</h2>
-  <br>
-  <br>
-  <div>
-	<p>
- <input type="search" class="boxsearch" placeholder="Search our store">
-  <button type="submit" class="btn btn-danger butsearch"><i class="fa fa-search"></i></button>
-</div>
-</p>
+    <p class="bHome"><a href="/#">Home</a> <i class="fa fa-angle-right"></i> Search</p>
 
-</div>
+    <div class="container">
+        <h2 class="Pro1">Search</h2>
 
-<hr class="container">
-<div class = "container">
- <a href="#detail/dress1"><img class="img-responsive col-md-4 col-sm-4 col-xs-4" src="Resources/D1.jpg" width="100"></a>
-<div class ="col-md-8 col-sm-8 col-xs-8">
-<a href="detail.html" style="color:red; font-size: 20px;">Akebono Halter Dress</a>
+        <div class="selectbox" style="margin-left:5px;">
+            <select class="form-control" ng-model="search.type">
+                <option value="">All</option>
+                <option value="Dress">Dress</option>
+                <option value="Dress">Shoes</option>
+                <option value="Bag">Bag</option>
+                <option value="Dress">Jewelry</option>
+                <option value="Dress">Beauty</option>
+            </select>
+        </div>
+        
+        <div class="selectbox">
+            <select class="form-control" ng-model="sleprice">
+                <option value="">Featured</option>
+                <option value="name">A-Z</option>
+                <option value="-name">Z-A</option>
+                <option value="price">Price, low to high</option>
+                <option value="-price">Price, high to low</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container grid1">
+        <div class="col-lg-2 col-md-2 col-sx-2 items" ng-repeat='p in items |filter: search | orderBy:sleprice | startFrom:currentPage*pageSize | limitTo:pageSize '>
+            <a href="#detail\{{p.id}}"><img class="img-responsive" ng-src="{{p.image}}"></a>
+            <div class="desc"><strong>{{p.name}}</strong></div>
+            <div class="desc">{{p.from}}</div>
+            <div class="desc">${{p.price | number:2}}</div>
+        </div>
+    </div>
+
+    <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+    </button>
+    {{currentPage+1}}/{{numberOfPages()}}
+    <button ng-disabled="currentPage >= items.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+        Next
+    </button>
+</div>
 <br>
 <br>
-    <div class="desc">$132.00</div>
-    <br>
-    <div class="desc">This is a sample product only, and not available for purchase.</div>
-
-
-</div>
-</div>
 <br>
 <br>

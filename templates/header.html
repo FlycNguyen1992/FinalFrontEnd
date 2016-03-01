@@ -17,9 +17,9 @@
                     <a class="dropdown-toggle" data-toggle="dropdown">Product<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="#product">All Product</a></li>
-                        <li><a href="#product">The Dress Shop</a></li>
-                        <li><a href="#product">Shoes & Accessories</a></li>
-                        <li><a href="#product">Beauty</a></li>
+                        <li><a href="#product/Dress">The Dress Shop</a></li>
+                        <li><a href="#product/Shoes & Accessories">Shoes & Accessories</a></li>
+                        <li><a href="#product/Beauty">Beauty</a></li>
                     </ul>
                 </li>
                 <li><a runat="server" href="#/about">About Us</a></li>
@@ -34,9 +34,9 @@
                 <li>
                     <form role="search" class="navbar-form navbar-left">
                         <div class="form-group">
-                            <input type="text" placeholder="Search" class="form-control" />
+                            <input ng-model="itemsearch" type="text" placeholder="Search" class="form-control" />
                         </div>
-                        <button type="submit" class="btn btn-danger"><i class="fa fa-search"></i></button>
+                        <button ng-click="searching(itemsearch)" type="submit" class="btn btn-danger"><i class="fa fa-search"></i></button>
                     </form>
                 </li>
 
@@ -58,9 +58,9 @@
             <a runat="server" style="font-size:150%;" data-toggle="dropdown"><i class="fa fa-gift"></i></i>Product <span class="caret"></span></a>
             <ul class="dropdown-menu">
                 <li><a href="#product">All Product</a></li>
-                <li><a href="#product">The Dress Shop</a></li>
-                <li><a href="#product">Shoes & Accessories</a></li>
-                <li><a href="#product">Beauty</a></li>
+                <li><a href="#product/Dress">The Dress Shop</a></li>
+                <li><a href="#product/Shoes & Accessories">Shoes & Accessories</a></li>
+                <li><a href="#product/Beauty">Beauty</a></li>
             </ul>
 
 
