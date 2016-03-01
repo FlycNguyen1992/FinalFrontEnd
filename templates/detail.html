@@ -1,0 +1,76 @@
+<div class="container" ng-repeat="item in items">
+    <p class="bHome"><a href="#/">Home</a> <i class="fa fa-angle-right"></i> {{item.name}}</p>
+    <br>
+    <div class="container">
+        <div class="col-md-6 col-sm-6 col-sx-6">
+            <div class="col-md-10 col-sm-10 col-sx-10">
+                <a href="{{item.image}}" data-lightbox="review" ><img src="{{item.image}}" width="100%" /></a>
+            </div>
+            <div class="col-md-2 col-sm-2 col-sx-2 demo1">
+                <a href="{{item.image1}}" data-lightbox="review" ><img src="{{item.image1}}" width="100%" /></a>
+            </div>
+            <div class="col-md-2 col-sm-2 col-sx-2 demo">
+                <a href="{{item.image2}}" data-lightbox="review" ><img src="{{item.image2}}" width="100%" /></a>
+            </div>
+             
+        </div>
+
+
+        <div class="col-md-6 col-sm-6 col-sx-6">
+            <div style="font-size: 25px;">Anthropologie</div>
+            <br>
+            <div style="font-size: 25px;"><strong>{{item.name}}</strong></div>
+            <br>
+            <div style="color:red; font-size: 25px;"><strong>${{item.price | number:2}}</strong></div>
+            <br>
+            <button ng-click="addItem(item)" class="btn btn-danger">Add to cart</button>
+            <br>
+            <br>
+            <p>Most in-stock items ship within 24 hours of ordering; however, some orders may take up to 48 hours to process. Please note that we do not ship on Saturdays, Sundays or US holidays.</p>
+
+            <p>Orders may be split across multiple shipments, and items ordered together may not be shipped out on the same day. Occasionally, items may be out-of-stock or backordered. You will be alerted in both instances, and in the event of a backorder, will be provided an approximate date of shipment. You will be informed if an item is backordered when you add it to your basket or within ten days of placing your order.</p>
+
+            <p>Items ordered through anthropologie.com cannot be shipped to Anthropologie stores.</p>
+        </div>
+
+    </div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="container">
+    <p><strong>More from this collection</strong></p>
+    <div class="col-md-3 col-sm-6 col-sx-6">
+        <a href="#detail/dress1"><img class="img-responsive" src="Resources/D1.jpg"></a>
+        <div class="desc"><strong>Au Revoir Dress</strong></div>
+        <div class="desc">Anthropologie</div>
+        <div class="desc">$132.00</div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-sx-6">
+        <a href="#detail/dress2"><img class="img-responsive" src="Resources/D2.jpg"></a>
+        <div class="desc"><strong>Burgeoning Hypericum Dress</strong></div>
+        <div class="desc">Anthropologie</div>
+        <div class="desc">$88.00</div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 col-sx-6">
+        <a href="#detail/bag1"><img class="img-responsive" src="Resources/B1.jpg"></a>
+        <div class="desc"><strong>Dash Mini Crossbody Bag</strong></div>
+        <div class="desc">Anthropologie</div>
+        <div class="desc">$68.00</div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-sx-6">
+        <a href="#detail/bag2"><img class="img-responsive" src="Resources/B2.jpg"></a>
+        <div class="desc"><strong>Thoroughfare Denim Shoulder Bag</strong></div>
+        <div class="desc">Anthropologie</div>
+        <div class="desc">$58.00</div>
+    </div>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+

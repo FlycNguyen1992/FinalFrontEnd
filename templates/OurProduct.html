@@ -1,0 +1,42 @@
+<div class="container">
+    <p class="bHome"><a href="Home.html">Home</a> <i class="fa fa-angle-right"></i> Product</p>
+
+    <div class="container">
+        <h2 class="Pro1">All Products</h2>
+
+        <div class="selectbox" style="margin-left:5px;">
+            <select class="form-control" ng-model="sletype">
+                <option value="">All</option>
+                <option value="Dress">Dress</option>
+                <option value="Dress">Shoes</option>
+                <option value="Bag">Bag</option>
+                <option value="Dress">Jewelry</option>
+                <option value="Dress">Beauty</option>
+            </select>
+        </div>
+        
+        <div class="selectbox">
+            <select class="form-control" ng-model="sleprice">
+                <option value="">Featured</option>
+                <option value="name">A-Z</option>
+                <option value="-name">Z-A</option>
+                <option value="price">Price, low to high</option>
+                <option value="-price">Price, high to low</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="container grid1">
+        <div class="col-lg-2 col-md-2 col-sx-2 items" ng-repeat='p in items | filter:{type:sletype} | orderBy:sleprice'>
+            <a href="#detail\{{p.id}}"><img class="img-responsive" ng-src="{{p.image}}"></a>
+            <div class="desc"><strong>{{p.name}}</strong></div>
+            <div class="desc">{{p.from}}</div>
+            <div class="desc">${{p.price | number:2}}</div>
+        </div>
+    </div>
+
+</div>
+<br>
+<br>
+<br>
+<br>

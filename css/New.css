@@ -1,188 +1,182 @@
 body {
-	font: 16px 'Asap';
-
+    font: 16px 'Asap';
 }
 
-
 .carousel-inner > .item > img {
-        margin: 0 auto;
-
-    }
+    margin: 0 auto;
+}
 
 footer {
-	background-color: #222222;
-	color: white;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-right: 50px;
-	
+    background-color: #222222;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 50px;
 }
 
 .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-
-.copy {
-	text-align: center;
-  padding-top: 15px;
-  padding-bottom: 15px;
+    margin-bottom: 0;
+    border-radius: 0;
 }
 
-ul { 
-	list-style: none;
+.copy {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+ul {
+    list-style: none;
 }
 
 footer a {
-	color: white;
-
+    color: white;
 }
 
-footer a:hover{
-	color: red;
-	text-decoration: none;
+footer a:hover {
+    color: red;
+    text-decoration: none;
 }
 
 .col-md-5 {
-        padding-left: 40px;
-
+    padding-left: 40px;
 }
 
 .navright {
-	padding-right: 50px;
-	position: absolute;
-    top: 50%;
+    /*padding-right: 50px;*/
+    position: absolute;
+    top: 35%;
     right: 0;
 }
 
 .navright a {
-	color: black;
-	padding: 15px;
-	text-decoration: none;
+    color: black;
+    padding: 15px;
+    text-decoration: none;
 }
 
-.navright a:hover{
-	color: red;
+.navright a:hover {
+    color: red;
 }
+
+.navright li {
+    display: inline;
+}
+
 
 /** media queries **/
-@media screen and (max-width: 767px) {
-  .navright {
-  	display: none;
-  }
-  .logocontainer {
-  	text-align: center;
-  }
 
-  .selectbox {
-    width: 100%;
-    padding-bottom: 30px;
-  }
+
+
+.hide {
+    display: none;
 }
+
 
 /* latin-ext */
+
 @font-face {
-  font-family: 'Asap';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Asap'), local('Asap-Regular'), url(http://fonts.gstatic.com/s/asap/v4/iadKCBVahjA5ul3LDhwH7A.woff2) format('woff2');
-  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+    font-family: 'Asap';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Asap'), local('Asap-Regular'), url(http://fonts.gstatic.com/s/asap/v4/iadKCBVahjA5ul3LDhwH7A.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
 }
+
+
 /* latin */
+
 @font-face {
-  font-family: 'Asap';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Asap'), local('Asap-Regular'), url(http://fonts.gstatic.com/s/asap/v4/oiVlPAjaPL0EznW3E5Z2DQ.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-family: 'Asap';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Asap'), local('Asap-Regular'), url(http://fonts.gstatic.com/s/asap/v4/oiVlPAjaPL0EznW3E5Z2DQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 .bHome {
-  color: red;
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  
+    color: red;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .bHome a {
-  color: black;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
 .bHome a:hover {
-  color: red;
+    color: red;
 }
 
-.grid1 {
+.items {
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+
+/*.grid1 {
   padding-top: 15px;
   padding-bottom: 50px;
-}
+  margin-bottom: 50px;
+}*/
 
 .selectbox {
-  float: right;
-  padding-top: 15px; 
-  
+    float: right;
+    padding-top: 15px;
 }
 
 .Pro1 {
-  float: left;
+    float: left;
 }
 
 .tabs {
-  word-spacing: 2px;
+    word-spacing: 2px;
 }
 
 .shop {
-  text-align: center;
-   padding: 30px;
-   
+    text-align: center;
+    padding: 30px;
 }
 
 .imgShop {
-  width: 100%;
+    width: 100%;
     height: auto;
 }
 
 .adress {
-  color: black;
-
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
 }
 
-.adress:hover{
-  color: red;
+.adress:hover {
+    color: red;
 }
 
+.boxsearch {
+    border: 1px solid #c4c4c4;
+    height: 34px;
+    width: 600px;
+    font-size: 16px;
+    padding: 4px 4px 4px 4px;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    box-shadow: 0px 0px 8px #d9d9d9;
+    -moz-box-shadow: 0px 0px 8px #d9d9d9;
+    -webkit-box-shadow: 0px 0px 8px #d9d9d9;
+}
 
+.boxsearch:focus {
+    outline: none;
+    border: 1px solid #7bc1f7;
+    box-shadow: 0px 0px 8px #7bc1f7;
+    -moz-box-shadow: 0px 0px 8px #7bc1f7;
+    -webkit-box-shadow: 0px 0px 8px #7bc1f7;
+}
 
-
-  .boxsearch { 
-    border: 1px solid #c4c4c4; 
-    height: 34px; 
-    width: 600px; 
-    font-size: 16px; 
-    padding: 4px 4px 4px 4px; 
-    border-radius: 4px; 
-    -moz-border-radius: 4px; 
-    -webkit-border-radius: 4px; 
-    box-shadow: 0px 0px 8px #d9d9d9; 
-    -moz-box-shadow: 0px 0px 8px #d9d9d9; 
-    -webkit-box-shadow: 0px 0px 8px #d9d9d9; 
-} 
- 
-.boxsearch:focus { 
-    outline: none; 
-    border: 1px solid #7bc1f7; 
-    box-shadow: 0px 0px 8px #7bc1f7; 
-    -moz-box-shadow: 0px 0px 8px #7bc1f7; 
-    -webkit-box-shadow: 0px 0px 8px #7bc1f7; 
-} 
- 
-
-.desc:hover{
-text-decoration: none;
-
+.desc:hover {
+    text-decoration: none;
 }
 
 table {
@@ -190,17 +184,70 @@ table {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 .subtotal {
-  float: right;
+    float: right;
 }
 
-.img-responsive:hover{
-  opacity: 0.4;
-    
+.img-responsive:hover {
+    opacity: 0.4;
 }
+
+.demo {
+    margin-top: 10px;
+}
+
+.dropdown-menu {
+    left: 20% !important;
+}
+
+.slideme {
+    max-width: 990px;
+    max-height: 450px;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-collapse.in {
+    overflow-y: none !important;
+}
+
+#owl-demo .owl-item div {
+    padding: 5px;
+}
+
+#owl-demo .owl-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+@media screen and (max-width: 767px) {
+    .navright {
+        display: none;
+    }
+    .logocontainer {
+        text-align: center;
+    }
+    .selectbox {
+        width: 100%;
+        padding-bottom: 30px;
+    }
+    .demo1 {
+        margin-top: 10px;
+    }
+    .hide {
+        display: block !important;
+    }
+}
+

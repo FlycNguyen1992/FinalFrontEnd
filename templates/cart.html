@@ -1,0 +1,52 @@
+<div class="container">
+	<h2>Your Cart</h2>
+  <br>
+  <br>
+  <table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th>Price</th>
+    <th>Price Quantity</th>
+    <th>Total</th>
+  </tr>
+  <tr ng-repeat="t in cart">
+    <td class = "col-md-2 col-sm-2 col-xs-2">
+      <img src="{{t.image}}" width="150" style="text-align: center;"> 
+      </td>
+     <td class = "col-md-3 col-sm-3 col-xs-3">   
+      <div >
+      <a href="#detail/{{t.id}}" style="color:red; font-size: 15px;">{{t.name}}</a>
+      <br>
+          <br>
+      <a href="" ng-click="remove(t)" style="color:red; font-size: 15px;">Remove</a>
+    </div>
+    </td>
+    <td class = "col-md-2 col-sm-2 col-xs-2">${{t.price | number:2}}</td>
+    <td class = "col-md-2 col-sm-2 col-xs-2"><input type="number" min="1" max="500" ng-model="quantity"></td>
+    <td class = "col-md-2 col-sm-2 col-xs-2">${{quantity*t.price | number:2}}</td>
+  </tr>
+  
+
+</table>
+<br>
+<p class="subtotal">Subtotal $228.00</p>
+
+
+</div>
+
+<div class="container">
+<p style="font-style: italic; float: right;">Shipping & taxes calculated at checkout</p>
+<br>
+<br>
+
+<div style = "float:right;"> 
+<button type="submit" class="btn btn-danger">Check Out</button>
+
+</div>
+</div>
+
+
+<br>
+<br>
+
