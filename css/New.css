@@ -64,9 +64,6 @@ footer a:hover {
 }
 
 
-/** media queries **/
-
-
 
 .hide {
     display: none;
@@ -231,7 +228,7 @@ td {
     border-radius: 3px;
 }
 
-
+/** media queries **/
 @media screen and (max-width: 767px) {
     .navright {
         display: none;

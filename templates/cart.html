@@ -23,14 +23,14 @@
     </div>
     </td>
     <td class = "col-md-2 col-sm-2 col-xs-2">${{t.price | number:2}}</td>
-    <td class = "col-md-2 col-sm-2 col-xs-2"><input type="number" min="1" max="500" ng-model="quantity"></td>
-    <td class = "col-md-2 col-sm-2 col-xs-2">${{quantity*t.price | number:2}}</td>
+    <td class = "col-md-2 col-sm-2 col-xs-2"><input type="number" min="1" max="500" ng-model="t.quantity"></td>
+    <td class = "col-md-2 col-sm-2 col-xs-2">${{t.quantity*t.price | number:2}}</td>
   </tr>
   
 
 </table>
 <br>
-<p class="subtotal">Subtotal $228.00</p>
+<p class="subtotal">Subtotal ${{totalprice(cart) | number:2}}</p>
 
 
 </div>
