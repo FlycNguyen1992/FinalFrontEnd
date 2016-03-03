@@ -89,6 +89,7 @@ app.controller('searchController', ['$scope', '$firebaseArray', '$routeParams', 
 app.controller('typeController', ['$scope', '$firebaseArray', '$routeParams', function ($scope, $firebaseArray, $routeParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
     $scope.items = $firebaseArray(ref.orderByChild('typeS').equalTo($routeParams.typeS));
+    $scope.type = $routeParams.typeS;
     $scope.currentPage = 0;
     $scope.pageSize = 24;
     $scope.numberOfPages = function () {

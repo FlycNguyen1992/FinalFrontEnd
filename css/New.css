@@ -1,5 +1,6 @@
 body {
     font: 16px 'Asap';
+    
 }
 
 .carousel-inner > .item > img {
@@ -62,8 +63,6 @@ footer a:hover {
 .navright li {
     display: inline;
 }
-
-
 
 .hide {
     display: none;
@@ -228,7 +227,11 @@ td {
     border-radius: 3px;
 }
 
+
+
+
 /** media queries **/
+
 @media screen and (max-width: 767px) {
     .navright {
         display: none;
@@ -247,4 +250,3 @@ td {
         display: block !important;
     }
 }
-
