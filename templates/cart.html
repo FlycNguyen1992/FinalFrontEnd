@@ -26,27 +26,18 @@
     <td class = "col-md-2 col-sm-2 col-xs-2"><input type="number" min="1" max="500" ng-model="t.quantity"></td>
     <td class = "col-md-2 col-sm-2 col-xs-2">${{t.quantity*t.price | number:2}}</td>
   </tr>
-  
-
-</table>
+  </table>
 <br>
 <p class="subtotal">Subtotal ${{totalprice(cart) | number:2}}</p>
-
-
 </div>
-
 <div class="container">
 <p style="font-style: italic; float: right;">Shipping & taxes calculated at checkout</p>
 <br>
 <br>
-
 <div style = "float:right;"> 
 <button type="submit" class="btn btn-danger">Check Out</button>
-
 </div>
 </div>
-
-
 <br>
 <br>
 
