@@ -60,7 +60,7 @@ app.directive('footerDirective', [function () {
         }
 	}
 ]);
-
+//day la commit gia
 app.controller('productController', ['$scope', '$firebaseArray', '$routeParams', function ($scope, $firebaseArray, $routeParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
     $scope.items = $firebaseArray(ref);
