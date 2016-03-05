@@ -39,9 +39,11 @@ footer a:hover {
     text-decoration: none;
 }
 
+/*
 .col-md-5 {
     padding-left: 40px;
 }
+*/
 
 .navright {
     /*padding-right: 50px;*/
@@ -248,5 +250,14 @@ td {
     }
     .hide {
         display: block !important;
+    }
+    .foot {
+        text-align: center;
+    }
+    .resize {
+        margin-left:20px;
+    }
+    .copy {
+        margin-left:30px;
     }
 }
