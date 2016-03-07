@@ -213,7 +213,7 @@ td {
 }
 
 .navbar-collapse.in {
-    overflow-y: none !important;
+    overflow-y : none !important;
 }
 
 #owl-demo .owl-item div {
@@ -260,4 +260,8 @@ td {
     .copy {
         margin-left:30px;
     }
+    .space {
+        margin-top:30px;
+    }
+    
 }
