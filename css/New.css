@@ -1,7 +1,21 @@
 body {
-    font: 16px 'Asap';
-    
+
+    font-family: myFirstFont;
+      font-size: 16px;
+    line-height: 1.7;
+    color: #555;
 }
+
+b {
+    font-weight: 500; 
+    color:#333;
+}
+
+@font-face {
+   font-family: myFirstFont;
+   src: url(../fonts/Asap-Regular.otf);
+}
+
 
 .carousel-inner > .item > img {
     margin: 0 auto;
@@ -68,28 +82,6 @@ footer a:hover {
 
 .hide {
     display: none;
-}
-
-
-/* latin-ext */
-
-@font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Asap'), local('Asap-Regular'), url(http://fonts.gstatic.com/s/asap/v4/iadKCBVahjA5ul3LDhwH7A.woff2) format('woff2');
-    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
-}
-
-
-/* latin */
-
-@font-face {
-    font-family: 'Asap';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Asap'), local('Asap-Regular'), url(http://fonts.gstatic.com/s/asap/v4/oiVlPAjaPL0EznW3E5Z2DQ.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
 }
 
 .bHome {
@@ -230,6 +222,56 @@ td {
 }
 
 
+  /*
+Back to top button 
+*/
+     #back-top {
+        position: fixed;
+        bottom: 30px;
+        right: 10px;
+    }
+    
+    #back-top a {
+        width: 50px;
+        display: block;
+        text-align: center;
+        font: 11px/100% Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #bbb;
+        /* background color transition */
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        transition: 1s;
+    }
+    
+    #back-top a:hover {
+        color: #000;
+    }
+    /* arrow icon (span tag) */
+    
+    #back-top span {
+        width: 50px;
+        height: 50px;
+        display: block;
+        margin-bottom: 7px;
+        background: #ddd url(../Resources/uparrow.png) no-repeat center center;
+        /* rounded corners */
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        /* background color transition */
+        -webkit-transition: 1s;
+        -moz-transition: 1s;
+        transition: 1s;
+    }
+    #back-top a:hover span {
+        background-color: #777;
+    }
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+    background-color: #C9302C;
+}
 
 
 /** media queries **/
@@ -259,5 +301,11 @@ td {
     }
     .copy {
         margin-left:30px;
+    }
+    .space {
+        margin-top:30px;
+    }
+    .searchbut {
+        display: none;
     }
 }
