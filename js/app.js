@@ -17,6 +17,9 @@ app.config(['$routeProvider', function ($routeProvider) {
         .when('/cart', {
             templateUrl: 'templates/cart.html'
         })
+        .when('/checkout', {
+            templateUrl: 'templates/checkout.html'
+        })
         .when('/contact', {
             templateUrl: 'templates/Contact.html'
         })
@@ -72,6 +75,8 @@ app.controller('productController', ['$scope', '$firebaseArray', '$routeParams',
     $scope.back = function () {
         $scope.currentPage = 0;
     }
+    
+    
 	    }]);
 
 app.controller('searchController', ['$scope', '$firebaseArray', '$routeParams', function ($scope, $firebaseArray, $routeParams) {
@@ -82,7 +87,6 @@ app.controller('searchController', ['$scope', '$firebaseArray', '$routeParams', 
     $scope.numberOfPages = function () {
         return Math.ceil($scope.items.length / $scope.pageSize);
     }
-
 
 	    }]);
 
@@ -103,11 +107,47 @@ app.controller('homeController', ['$scope', '$firebaseArray', function ($scope, 
 
 app.controller('detailController', ['$scope', '$firebaseArray', '$routeParams', function ($scope, $firebaseArray, $routeParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
+    window.scrollTo(0, 0);
     var id = $routeParams.id;
     $scope.items = $firebaseArray(ref.orderByChild('id').equalTo(id));
+    var listitem = {};
+    var listitem2 = [];
+    ref.on('value', function(snapshot){
+        listitem = snapshot.val();
+        var arr = $.map(listitem, function(el){
+            return el;
+        })
+        var t = 4;
+        for (var i = 0; i < t;i++){
+            var it = arr[Math.floor(Math.random()*arr.length)];
+            if (it.id==id) {
+                if (i!=0) {
+                i--;
+                }
+                else {
+                    t++;
+                }
+                arr.splice(i,1);
+            }
+            else {
+                listitem2.push(it);
+                arr.splice(arr.indexOf(it),1);
+            }
+        }
+        $scope.relateitem = listitem2;
+        
+    }) 
+    
+           
 	    }]);
 
 app.controller('mainController', ['$window', '$scope', '$firebaseArray', function ($window, $scope, $firebaseArray) {
+    $scope.refer = function() {
+        $('.navbar-collapse').toggleClass('in');
+    }
+    $scope.scrolltop = function() {
+         window.scrollTo(0, 0);
+    }
     $scope.cart = [];
     $scope.search = {};
     $scope.numitem = 0;

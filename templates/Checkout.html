@@ -1,0 +1,77 @@
+<div class="container">
+    <h2>Check Out</h2>
+    <p class="bHome"><a href="#cart">Cart</a> <i class="fa fa-angle-right"></i> Chect out</p>
+    
+    <div class="container col-md-6 col-sm-6 col-xs-12" style="float:right;" >
+       <table>
+  <tr>
+     </tr>
+  <tr ng-repeat="t in cart">
+    <td class = "col-md-2 col-sm-2 col-xs-2">
+      <img src="{{t.image}}" width="50" style="text-align: center;"> 
+      </td>
+      <td class = "col-md-1 col-sm-1 col-xs-1"><p>{{t.quantity}}</p></td>
+     <td class = "col-md-4 col-sm-4 col-xs-4">   
+            <p style="font-size: 15px; text-align: center;">{{t.name}}</p>
+      </td>
+      <td class = "col-md-4 col-sm-4 col-xs-4">${{t.quantity*t.price | number:2}}</td>
+  </tr>
+  </table>
+        <p style="float:left;" >Total:</p>
+        <p style="float:right; font-size: 20px;"> <strong>${{totalprice(cart) | number:2}}</strong> </p>
+        
+</div>
+    <div class="container col-md-6 col-sm-6 col-xs-12" >
+    <p>Customer information</p>
+    <div >
+        <input class="style1 col-md-12 col-sm-12 col-xs-12 " type="email" placeholder="Email" autofocus="autofocus" required="required">
+    </div>
+    <br>
+    <br>
+    <p>Shipping address</p>
+    <div >
+        <input class="style1 col-md-6 col-sm-6 col-xs-6 " type="text" placeholder="First name">
+        <input class="style1 col-md-6 col-sm-6 col-xs-6 " type="text" placeholder="Last name">
+    </div>
+    <div >
+        <input class="style1 col-md-12 col-sm-12 col-xs-12 " type="text" placeholder="Company (optional)">
+    </div>
+    <div >
+        <input class="style1 col-md-9 col-sm-9 col-xs-9 " type="text" placeholder="Adress">
+        <input class="style1 col-md-3 col-sm-3 col-xs-3 " type="text" placeholder="Apt, suite, etc. (optional)">
+    </div>
+    <div >
+        <input class="style1 col-md-12 col-sm-12 col-xs-12 " type="text" placeholder="City">
+    </div>
+    <div >
+        <input class="style1 col-md-4 col-sm-4 col-xs-4 " type="text" placeholder="Country">
+        <input class="style1 col-md-4 col-sm-4 col-xs-4 " type="text" placeholder="State">
+        <input class="style1 col-md-4 col-sm-4 col-xs-4 " type="text" placeholder="Zip Code">
+    </div>
+    <div >
+        <input class="style1 col-md-12 col-sm-12 col-xs-12 " type="text" placeholder="Phone (Optional)">
+    </div>
+    <div class="form-group">
+        <button class="btn btn-danger" type="submit" style="float:right; margin-top: 10px; margin-bottom: 10px;">
+                Finish
+            </button>
+     </div>
+</div>
+</div>
+<br>
+<br>
+<style> 
+  .style1 { 
+    border: 1px solid #c4c4c4;
+      font-size: 16px;
+    margin-top: 5px;
+    border-radius: 4px; 
+    -moz-border-radius: 4px; 
+    -webkit-border-radius: 4px; 
+ } 
+ 
+.style1:focus { 
+    outline: none; 
+    border: 2px solid red; 
+ } 
+ </style> 

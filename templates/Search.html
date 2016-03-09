@@ -28,7 +28,7 @@
 
     <div class="container grid1">
         <div ng-repeat='p in items |filter: search  | orderBy:sleprice |  startFrom:currentPage*pageSize | limitTo:pageSize '>
-            <div class="col-lg-2 col-md-6 col-xs-6 items">
+            <div class="col-lg-2 col-md-6 col-xs-12 items">
                 <a href="#detail\{{p.id}}"><img class="img-responsive" ng-src="{{p.image}}"></a>
                 <div class="desc"><strong>{{p.name}}</strong></div>
                 <div class="desc">{{p.from}}</div>

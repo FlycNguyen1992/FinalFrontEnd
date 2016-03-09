@@ -44,32 +44,17 @@
 <br>
 <div class="container">
     <p><strong>You may also like</strong></p>
+    <div ng-repeat="relate in relateitem">
     <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="#detail/dress1"><img class="img-responsive" src="Resources/D1.jpg"></a>
-        <div class="desc"><strong>Ainkia Kimono Dress</strong></div>
+        <a href="#detail/{{relate.id}}"><img class="img-responsive" src="{{relate.image}}"></a>
+        <div class="desc"><strong>{{relate.name}}</strong></div>
         <div class="desc">Anthropologie</div>
-        <div class="desc">$498.00</div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="#detail/dress2"><img class="img-responsive" src="Resources/D2.jpg"></a>
-        <div class="desc"><strong>Winter Rose Gown</strong></div>
-        <div class="desc">Anthropologie</div>
-        <div class="desc">$295.00</div>
-    </div>
-
-    <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="#detail/bag1"><img class="img-responsive" src="Resources/B1.jpg"></a>
-        <div class="desc"><strong>Gosee Crossbody Bag</strong></div>
-        <div class="desc">Anthropologie</div>
-        <div class="desc">$365.00</div>
-    </div>
-    <div class="col-md-3 col-sm-6 col-xs-12">
-        <a href="#detail/bag2"><img class="img-responsive" src="Resources/B2.jpg"></a>
-        <div class="desc"><strong>Aideen Crossbody Bag</strong></div>
-        <div class="desc">Anthropologie</div>
-        <div class="desc">$258.00</div>
+        <div class="desc">${{relate.price}}</div>
     </div>
     </div>
+    
+    </div>
+    
 <br>
 <br>
 <br>

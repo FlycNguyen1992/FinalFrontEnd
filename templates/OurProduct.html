@@ -28,7 +28,8 @@
     </div>
 
     <div class="container grid1">
-        <div ng-repeat='p in items | filter:{type:sletype} | orderBy:sleprice | startFrom:currentPage*pageSize | limitTo:pageSize'>
+
+        <div ng-repeat='p in items| filter:{type:sletype} | orderBy:sleprice |startFrom:currentPage*pageSize | limitTo:pageSize'>
             <div class="col-lg-2 col-md-6 col-xs-12 items">
                 <a href="#detail\{{p.id}}"><img class="img-responsive" ng-src="{{p.image}}"></a>
                 <div class="desc"><strong>{{p.name}}</strong></div>
@@ -36,8 +37,9 @@
                 <div class="desc">${{p.price | number:2}}</div>
             </div>
             <div ng-if="$index > 1 && ($index + 1) % 6 == 0" class="clearfix"></div>
-            
+
         </div>
+
     </div>
     <div class="pagination" style="float: right;">
         <button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
@@ -48,8 +50,6 @@
             Next
         </button>
     </div>
+
+
 </div>
-<br>
-<br>
-<br>
-<br>
