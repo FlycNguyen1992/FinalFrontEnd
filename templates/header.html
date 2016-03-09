@@ -10,29 +10,29 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav hide">
-                <li><a runat="server" ng-click="refer()" href="#/">Home</a></li>
+                <li><a runat="server" href="#/">Home</a></li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown">Product<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a ng-click="refer()" href="#product">All Product</a></li>
-                        <li><a ng-click="refer()" href="#product/The Dress Shop">The Dress Shop</a></li>
-                        <li><a ng-click="refer()" href="#product/Shoes & Accessories">Shoes & Accessories</a></li>
-                        <li><a ng-click="refer()" href="#product/Beauty">Beauty</a></li>
+                        <li><a href="#product">All Product</a></li>
+                        <li><a href="#product/The Dress Shop">The Dress Shop</a></li>
+                        <li><a href="#product/Shoes & Accessories">Shoes & Accessories</a></li>
+                        <li><a href="#product/Beauty">Beauty</a></li>
                     </ul>
                 </li>
-                <li><a runat="server" ng-click="refer()" href="#/about">About Us</a></li>
-                <li><a runat="server" ng-click="refer()" href="#/contact">Contact</a></li>
+                <li><a runat="server" href="#/about">About Us</a></li>
+                <li><a runat="server" href="#/contact">Contact</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="#cart" ng-click="refer()" class="fa fa-shopping-bag"> <span class="badge" ng-bind="numitem"></span></a>
+                    <a href="#cart" class="fa fa-shopping-bag"> <span class="badge" ng-bind="numitem"></span></a>
                 </li>
                 <li>
                     <form role="search" class="navbar-form navbar-left">
                         <div class="form-group">
                             <input ng-model="itemsearch" type="text" placeholder="Search" class="form-control" />
                         </div>
-                        <button ng-click="searching(itemsearch)" type="submit" class="btn btn-danger searchbut"><i class="fa fa-search"></i></button>
+                        <button ng-click="searching(itemsearch)" type="submit" class="btn btn-danger"><i class="fa fa-search"></i></button>
                     </form>
                 </li>
             </ul>
