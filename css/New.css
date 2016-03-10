@@ -1,6 +1,7 @@
+
 body {
 
-   font-family: 'Asap', sans-serif;
+    font-family: 'Asap', sans-serif;
     font-size: 16px;
     line-height: 1.7;
     color: #555;
@@ -10,9 +11,6 @@ b {
     font-weight: 500; 
     color:#333;
 }
-
-
-
 
 .carousel-inner > .item > img {
     margin: 0 auto;
@@ -271,6 +269,9 @@ Back to top button
 }
 
 
+
+
+
 /** media queries **/
 
 @media screen and (max-width: 767px) {
@@ -305,4 +306,65 @@ Back to top button
     .searchbut {
         display: none;
     }
+/*
+    table {
+		overflow-x: none;
+		display: block;
+	}
+*/
+    
+    /*table responsive*/
+    table.table.table-no-more {
+        width: 100%;
+    }
+
+    /* Force table to not be like tables anymore */
+    table.table.table-no-more,
+    table.table.table-no-more thead,
+    table.table.table-no-more tbody,
+    table.table.table-no-more th,
+    table.table.table-no-more td,
+    table.table.table-no-more tr {
+        display: block;
+    }
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    table.table.table-no-more thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    table.table.table-no-more tr {
+        border: $base-border-style;
+    }
+
+    table.table.table-no-more td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: $base-border-style;
+        position: relative;
+        padding-left: 30%;
+        white-space: normal !important;
+        text-align:left;
+    }
+
+    table.table.table-no-more td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 25%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+    }
+
+    /*
+    Label the data
+    */
+    table.table.table-no-more td:before { content: attr(data-title); }
 }
+

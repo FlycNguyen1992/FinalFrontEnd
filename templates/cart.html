@@ -1,34 +1,31 @@
 <div class="container">
-	<h2>Your Cart</h2>
-  <br>
-  <br>
-  <table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th>Price</th>
-    <th>Price Quantity</th>
-    <th>Total</th>
-  </tr>
-  <tr ng-repeat="t in cart">
-    <td class = "col-md-2 col-sm-2 col-xs-2">
-      <img src="{{t.image}}" width="150" style="text-align: center;"> 
-      </td>
-     <td class = "col-md-3 col-sm-3 col-xs-3">   
-      <div >
-      <a href="#detail/{{t.id}}" style="color:red; font-size: 15px;">{{t.name}}</a>
-      <br>
-          <br>
-      <a href="" ng-click="remove(t)" style="color:red; font-size: 15px;">Remove</a>
-    </div>
-    </td>
-    <td class = "col-md-2 col-sm-2 col-xs-2">${{t.price | number:2}}</td>
-    <td class = "col-md-2 col-sm-2 col-xs-2"><input type="number" min="1" max="500" ng-model="t.quantity"></td>
-    <td class = "col-md-2 col-sm-2 col-xs-2">${{t.quantity*t.price | number:2}}</td>
-  </tr>
-  </table>
+<table class="table table-condensed taken table-no-more">
+    <thead>
+        <tr>
+            <th></th>
+    		<th></th>
+			<th>Price</th>
+          	<th>Quantity</th>
+			<th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="t in cart">
+            <td class="image" data-title=""><img src="{{t.image}}" width="100" style="text-align: center;"></td>
+            <td class="product" data-title="Name">
+                <a href="#detail/{{t.id}}" style="color:red; font-size: 15px;">{{t.name}}</a>
+                <br>
+                <a href="" ng-click="remove(t)" style="color:red; font-size: 15px;">Remove</a>
+            </td>
+            <td class="Price" data-title="Price">${{t.price | number:2}}</td>
+            <td class="Quantity" data-title="Quantity"><input style="weight:10px;" type="number" min="1" max="500" ng-model="t.quantity"></td>
+            <td class="Total" data-title="Total">${{t.quantity*t.price | number:2}}</td>
+        </tr>
+    </tbody>
+</table>
 <br>
 <p class="subtotal">Subtotal ${{totalprice(cart) | number:2}}</p>
+</div>
 </div>
 <div class="container">
 <p style="font-style: italic; float: right;">Shipping & taxes calculated at checkout</p>
@@ -37,7 +34,3 @@
 <div style = "float:right;"> 
 <a href="#checkout" type="submit" class="button btn btn-danger">Check Out</a>
 </div>
-</div>
-<br>
-<br>
-
