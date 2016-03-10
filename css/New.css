@@ -188,7 +188,7 @@ td {
     margin-top: 10px;
 }
 
-.dropdown-menu {
+.drop1 {
     left: 20% !important;
 }
 
@@ -268,8 +268,53 @@ Back to top button
     background-color: #C9302C;
 }
 
+/*Search*/
+.typeahead-demo .custom-popup-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        background-color: #f9f9f9;
+    }
+    
+    .typeahead-demo .custom-popup-wrapper > .message {
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+        color: #868686;
+    }
+    
+    .typeahead-demo .custom-popup-wrapper > .dropdown-menu {
+        position: static;
+        float: none;
+        display: block;
+        min-width: 160px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+/* enable absolute positioning */
+.inner-addon {
+  position: relative !important;
+}
+
+/* style glyph */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+/* align glyph */
+.left-addon .glyphicon  { left:  0px;}
+.right-addon .glyphicon { right: 0px;}
 
 
+.search2 {
+    display: none;
+}
 
 
 /** media queries **/
@@ -305,6 +350,14 @@ Back to top button
     }
     .searchbut {
         display: none;
+    }
+    
+    .search1 {
+        display: none;
+    }
+    
+    .search2 {
+        display: block;
     }
 /*
     table {

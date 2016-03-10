@@ -1,4 +1,4 @@
-var app = angular.module('store', ['firebase', 'ngRoute']);
+var app = angular.module('store', ['firebase', 'ngRoute','angularUtils.directives.dirPagination','ngAnimate', 'ui.bootstrap']);
 app.config(['$routeProvider', function ($routeProvider) {
     $routeProvider
         .when('/', {
@@ -67,38 +67,18 @@ app.directive('footerDirective', [function () {
 app.controller('productController', ['$scope', '$firebaseArray', '$routeParams', function ($scope, $firebaseArray, $routeParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
     $scope.items = $firebaseArray(ref);
-    $scope.currentPage = 0;
+    $scope.currentPage = 1;
     $scope.pageSize = 12;
-    $scope.numberOfPages = function () {
-        return Math.ceil($scope.items.length / $scope.pageSize);
-    };
-    $scope.back = function () {
-        $scope.currentPage = 0;
-    }
     
     
-	    }]);
-
-app.controller('searchController', ['$scope', '$firebaseArray', '$routeParams', function ($scope, $firebaseArray, $routeParams) {
-    var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
-    $scope.items = $firebaseArray(ref);
-    $scope.currentPage = 0;
-    $scope.pageSize = 12;
-    $scope.numberOfPages = function () {
-        return Math.ceil($scope.items.length / $scope.pageSize);
-    }
-
 	    }]);
 
 app.controller('typeController', ['$scope', '$firebaseArray', '$routeParams', function ($scope, $firebaseArray, $routeParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
     $scope.items = $firebaseArray(ref.orderByChild('typeS').equalTo($routeParams.typeS));
     $scope.type = $routeParams.typeS;
-    $scope.currentPage = 0;
+    $scope.currentPage = 1;
     $scope.pageSize = 12;
-    $scope.numberOfPages = function () {
-        return Math.ceil($scope.items.length / $scope.pageSize);
-    }
 	    }]);
 
 app.controller('homeController', ['$scope', '$firebaseArray', function ($scope, $firebaseArray) {
@@ -142,6 +122,15 @@ app.controller('detailController', ['$scope', '$firebaseArray', '$routeParams', 
 	    }]);
 
 app.controller('mainController', ['$window', '$scope', '$firebaseArray', function ($window, $scope, $firebaseArray) {
+   var _selected;
+  $scope.selected = undefined;
+  var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
+  $scope.statesWithFlags = $firebaseArray(ref);
+  $scope.enter = function (id) {
+     $window.location.href = '#detail/'+id.id;  
+  }
+ 
+
     $scope.refer = function() {
         $('.navbar-collapse').toggleClass('in');
     }
@@ -171,11 +160,7 @@ app.controller('mainController', ['$window', '$scope', '$firebaseArray', functio
         $scope.numitem -= 1;
     };
     
-    $scope.searching = function (sea) {
-        $scope.search.name = sea;
-        $window.location.href = '#search';
-    };
-
+   
     $scope.totalprice = function (product) {
         var sum = 0;
         angular.forEach(product, function (t) {

@@ -11,7 +11,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="t in cart">
-            <td class="image" data-title=""><img src="{{t.image}}" width="100" style="text-align: center;"></td>
+            <td class="image" data-title=""><img ng-src="{{t.image}}" width="100" style="text-align: center;"></td>
             <td class="product" data-title="Name">
                 <a href="#detail/{{t.id}}" style="color:red; font-size: 15px;">{{t.name}}</a>
                 <br>
