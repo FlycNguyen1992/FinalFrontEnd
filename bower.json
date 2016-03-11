@@ -23,6 +23,8 @@
     "firebase": "^2.4.1",
     "angularfire": "^1.1.4",
     "owl.carousel": "^2.0.0-beta.3",
-    "angular-mocks": "^1.5.0"
+    "angular-mocks": "^1.5.0",
+    "angularUtils-pagination": "angular-utils-pagination#^0.11.0",
+    "angular-ui-bootstrap": "^1.2.4"
   }
 }

@@ -64,7 +64,7 @@ app.directive('footerDirective', [function () {
 	}
 ]);
 
-app.controller('productController', ['$scope', '$firebaseArray', '$routeParams', function ($scope, $firebaseArray, $routeParams) {
+app.controller('productController', ['$scope', '$firebaseArray', function ($scope, $firebaseArray, $routeParams) {
     var ref = new Firebase("https://scorching-inferno-3570.firebaseio.com/");
     $scope.items = $firebaseArray(ref);
     $scope.currentPage = 1;
