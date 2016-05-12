@@ -164,6 +164,13 @@ footer a:hover {
     text-decoration: none;
 }
 
+.desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;

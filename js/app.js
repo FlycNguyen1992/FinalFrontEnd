@@ -160,6 +160,14 @@ app.controller('mainController', ['$window', '$scope', '$firebaseArray', functio
         $scope.numitem -= 1;
     };
     
+    $scope.showConfirm = function () {
+                $window.location.href = '#/';
+                   setTimeout(function () {
+                    $window.location.reload();
+                }, 100);
+
+    };
+    
    
     $scope.totalprice = function (product) {
         var sum = 0;

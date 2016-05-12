@@ -31,7 +31,7 @@
                     <form role="search" class="navbar-form navbar-left">
                         <div class='inner-addon right-addon search1'>
     
-    <input type="text" class="form-control " ng-model="customSelected" placeholder="Search" uib-typeahead="state as state.name for state in statesWithFlags | filter:{name:$viewValue} | limitTo:5" typeahead-template-url="customTemplate.html"  typeahead-show-hint="true" typeahead-min-length="0" typeahead-on-select="enter(customSelected)">
+    <input type="text" class="form-control " ng-model="customSelected" placeholder="Search" uib-typeahead="state as state.name for state in statesWithFlags | filter:{name:$viewValue} | limitTo:5" typeahead-template-url="customTemplate.html"  typeahead-show-hint="true" typeahead-min-length="2" typeahead-on-select="enter(customSelected)">
     <i class="glyphicon glyphicon-search" style="color:red;"></i>
 </div>
                         
